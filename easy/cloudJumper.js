@@ -13,21 +13,21 @@ must avoid the clouds at indices 1 and 5.
 They could follow these two paths: '0->2->4->6' or '0->2->3->4->6'. 
 The first path takes 3 jumps while the second takes 4. Return 3. */
 
-const levelOne = [0, 0, 1, 0, 0, 1, 0,] //output = 4
+const levelOne = [0, 0, 1, 0, 0, 1, 0]; //output = 4
 const levelTwo = [0, 0, 0, 1, 0, 0]; //output = 3
 const levelThree = [0, 1, 0, 0, 0, 1, 0]; //output = 3
 
 function cloudJumper(c) {
-    // Write your code here
-    let jumps = 0;
-    let currentCloud = 0;
-    for (let i = 0; i < c.length - 1;) {
-        i += (c[i + 2] ? 1 : 2);
-        jumps++
-    }
-    return jumps;
+  // Write your code here
+  let jumps = 0;
+  let currentCloud = 0;
+  for (let i = 0; i < c.length - 1; ) {
+    i += c[i + 2] ? 1 : 2;
+    jumps++;
+  }
+  return jumps;
 }
 
 console.log(cloudJumper(levelOne));
-console.log(cloudJumper(levelTwo));  
-console.log(cloudJumper(levelThree))         
+console.log(cloudJumper(levelTwo));
+console.log(cloudJumper(levelThree));
