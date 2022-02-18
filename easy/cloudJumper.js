@@ -8,6 +8,7 @@
 
 const levelOne = [0, 0, 1, 0, 0, 1, 0,] //output = 4
 const levelTwo = [0, 0, 0, 1, 0, 0]; //output = 3
+const levelThree = [0, 1, 0, 0, 0, 1, 0]; //output = 3
 
 function cloudJumper(c) {
     // Write your code here
@@ -21,4 +22,5 @@ function cloudJumper(c) {
 }
 
 console.log(cloudJumper(levelOne));
-console.log(cloudJumper(levelTwo));           
+console.log(cloudJumper(levelTwo));  
+console.log(cloudJumper(levelThree))         
